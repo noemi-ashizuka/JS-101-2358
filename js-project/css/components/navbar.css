@@ -1,0 +1,22 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+  box-shadow: 0 0 16px rgba(0,0,0,0.1);
+}
+
+.navbar-lewagon .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+  height: 40px;
+}
+
+.navbar-lewagon .navbar-brand h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
