@@ -8,26 +8,40 @@ console.log("hello from application.js");
 
 // with its ID (select Charles's photo)
 
+// document.querySelector("any CSS selector");
+// const charles = document.querySelector("#Nainoa"); // html element
+// console.log(charles);
+
+
+// document.getElementById("Nainoa");
 
 
 
 // with its tag type (select the group number)
 
+// const groupNumber = document.querySelector("h2");
+// console.log(groupNumber);
 
 
 
 // with its class (select the class group)
 
-
-
+// const groups = document.querySelector(".group");
+// console.log(groups);
 
 
 // select multiple elements (select all the cards)
+const cards = document.querySelectorAll(".card");
+// console.log(cards);
 
+// cards.forEach((card) => {
+//   console.log(card); 
+// });
 
 
 // turn a NodeList into an actual array
-
+const cardsArray = Array.from(cards); // this gives me an array made from the cards nodelist
+// console.log(cardsArray);
 
 
 // 1. Step 1 select elements you need from the page document.querySelector(css selector)
@@ -47,45 +61,52 @@ const noemi = `<li>
           </li> `
 
 // 1. select elements we need from the dom
-
+const ul = document.querySelector("#yoko ul");
+// console.log(ul);
 
 // 2. modify the DOM (add a new li to the list)
-
+ul.insertAdjacentHTML("beforeend", noemi);
 
 
 // Change the element style (group background to green)
-
+const group = document.querySelector(".group");
+// console.log(group);
 
 // CSS background-color: green;
-
+group.style.backgroundColor = "green";
+// group.style.color = "white";
 
 
 // Add a class to the element (add text-white to groups)
 
 // in CSS file I have .text-white class
 
-
-
+group.classList.add("text-white");
 
 // Remove it
 
-
-
-
-
+group.classList.remove("text-italic");
+// group.classList.toggle("text-italic");
 
 
 // Read/Write for inputs (change the value in the email input)
 
+const email = document.querySelector("#email");
+// console.log(email.value);
+email.value = "hi, don't email me"
 
 
 // Read/Write the (inner) text and HTML content (Yokohama FC ⚽️ title)
-
-
-
-
+const yokoTitle = document.querySelector("#yoko h3");
+// yokoTitle.innerText = "Best Team";
+// yokoTitle.innerHTML => 'Yokohama <em>FC</em> ⚽️'
+// yokoTitle.textContent => 'Yokohama FC ⚽️' (same as innerText)
+// yokoTitle.outerHTML => '<h3>Yokohama <em>FC</em> ⚽️</h3>'
 
 // read the html inside the group div
 
 
+const groups = document.querySelector(".group");
+
+groups.innerHTML = "Good luck with the JS challenges"
 
